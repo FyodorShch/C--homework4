@@ -6,15 +6,16 @@
 
 Console.Clear();
 
-void Pow(int p, int q)
+int Pow(int p, int q)
 {
     int result = p, i = 1;
+    if (q == 0) return 1;
     while (i < q)
     {
         result = result * p;
         i++;
     }
-    Console.WriteLine($"A в степени В равно {result}");
+    return result;
 }
 
 int A = int.Parse(Console.ReadLine());
